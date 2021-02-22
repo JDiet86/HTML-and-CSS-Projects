@@ -3,7 +3,8 @@
 <head>
 	<title>Sea Turtles</title>
 	<meta charset="utf-8"> 
-	<link rel="stylesheet" type="text/css" href="./one_page_website.css">
+	<link rel="stylesheet" type="text/css" href="one_page_website.css">
+	<script src="JS/one_page_website.js" defer></script>
 </head>
 	<body>
 		<!--NAV-->
@@ -43,9 +44,10 @@
 		<!--END GALLERY-->
 				
 					         <!--PHOTO-CONTAINER 1-->
-                    <div class="photo-container">
-						<div class="photo">
-							<img src=".\Images\Green.png" alt="Green Sea Turtle">
+                    <div class="photo-container" onclick="openModal();currentSlide(1)">
+						
+						<div class="photo" >
+							<img src=".\Images\Green.png"  class="hover-shadow"  alt="Green Sea Turtle">
 							<div class="photo-overlay">
 								<h3 class="white-head">The Green Sea Turtle</h3>
 								<p>Click here for more info</p>
@@ -55,9 +57,9 @@
 								<!--END PHOTO-CONTAINER 1-->								
 
  					         <!--PHOTO-CONTAINER 2-->
-                    <div class="photo-container">
+                    <div class="photo-container" onclick="openModal();currentSlide(2)"> 
 						<div class="photo">
-							<img src=".\Images\hawksbill.png" alt="Hawksbill Sea Turtle">
+							<img src=".\Images\hawksbill.png" class="hover-shadow" alt="Hawksbill Sea Turtle">
 							<div class="photo-overlay">
 								<h3 class="white-head">The Hawksbill Sea Turtle</h3>
 								<p>Click here for more info</p>
@@ -67,9 +69,9 @@
 								<!--END PHOTO-CONTAINER 2-->                   
 
 					         <!--PHOTO-CONTAINER 3-->
-                    <div class="photo-container">
+                    <div class="photo-container" onclick="openModal();currentSlide(3)">
 						<div class="photo">
-							<img src=".\Images\Leatherback.png" alt="Leatherback Sea Turtle">
+							<img src=".\Images\Leatherback.png"  class="hover-shadow" alt="Leatherback Sea Turtle">
 							<div class="photo-overlay">
 								<h3 class="white-head">The Leatherback Sea Turtle</h3>
 								<p>Click here for more info</p>
@@ -79,9 +81,9 @@
 								<!--END PHOTO-CONTAINER 3-->					
 			
 					         <!--PHOTO-CONTAINER 4-->
-                    <div class="photo-container">
+                    <div class="photo-container" onclick="openModal();currentSlide(4)">
 						<div class="photo">
-							<img src=".\Images\Loggerhead.png" alt="Loggerhead Sea Turtle">
+							<img src=".\Images\Loggerhead.png"  class="hover-shadow" alt="Loggerhead Sea Turtle">
 							<div class="photo-overlay">
 								<h3 class="white-head">The Loggerhead Sea Turtle</h3>
 								<p>Click here for more info</p>
@@ -90,36 +92,84 @@
 					</div>
 						<!--END PHOTO-CONTAINER 4-->			
 						
-						<!--PHOTO-CONTAINER 5-->
-						<div class="photo-container">
-							<div class="photo">
-								<img src=".\Images\Banner.jpg" alt="Olive-Ridley Sea Turtle">
-								<div class="photo-overlay">
-									<h3 class="white-head"></h3>
-									<p></p>
-								</div>
-							</div>
-						</div>
-							<!--END PHOTO-CONTAINER 5-->
-						
-						
-						
-						<!--PHOTO-CONTAINER 6-->
-                    <div class="photo-container">
+					<!--PHOTO-CONTAINER 5-->
+					<div class="photo-container" onclick="openModal();currentSlide(5)">
 						<div class="photo">
-							<img src=".\Images\Olive-Ridley.png" alt="Olive-Ridley Sea Turtle">
+							<img src=".\Images\Olive-Ridley.png"  class="hover-shadow" alt="Olive-Ridley Sea Turtle">
 							<div class="photo-overlay">
 								<h3 class="white-head">The Olive-Ridley Sea Turtle</h3>
 								<p>Click here for more info</p>
 							</div>
 						</div>
 					</div>
-						<!--END PHOTO-CONTAINER 6-->		
-			
+					<!--END PHOTO-CONTAINER 5-->
+
+						
+						
+
+
+					<!--Modal/Lightbox-->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+					  
+						    <div class="mySlides">
+								<div class="numbertext">1 / 5</div>
+								<img src=".\Images\Green.png" style="width:100%">
+						   	</div>
+					  
+						    <div class="mySlides">
+								<div class="numbertext">2 / 5</div>
+								<img src=".\Images\hawksbill.png" style="width:100%">
+						    </div>
+					  
+						    <div class="mySlides">
+								<div class="numbertext">3 / 5</div>
+								<img src=".\Images\Leatherback.png" style="width:100%">
+						    </div>
+						  
+						    <div class="mySlides">
+								<div class="numbertext">4 / 5</div>
+								<img src=".\Images\Loggerhead.png" style="width:100%">
+						    </div>
+
+						    <div class="mySlides">
+								<div class="numbertext">5 / 5</div>
+								<img src=".\Images\Olive-Ridley.png" style="width:100%">
+						    </div>
+
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+
+							<div class="column">
+								<img class="demo cursor" src=".\Images\Green.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+							</div>
+
+							  <div class="column">
+								<img class="demo cursor" src=".\Images\hawksbill.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+							</div>
+
+							<div class="column">
+								<img class="demo cursor" src=".\Images\Leatherback.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+							</div>
+
+							<div class="column">
+								<img class="demo cursor" src=".\Images\Loggerhead.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+							</div>
+
+							<div class="column">
+								<img class="demo cursor" src=".\Images\Olive-Ridley.png" style="width:100%" onclick="currentSlide(5)" alt="Northern Lights">
+							</div>
+							
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<!--END GALLERY-->
+
+		
 
 		<!--NEWSLETTER-->
 
@@ -130,20 +180,18 @@
 					<h1 class="heading-padding"></h1>
 						<div class="form-news">
 							<h2><span>Find out how you can get involved.</span></h2><br>
-
 								<form action="" method="post">
 								<input class="news" type="text" value="" placeholder="First Name">
 								<input class="news" type="text" value="" placeholder="Last Name">
 								<input class="news" type="text" value="" placeholder="Email Address">
 								<div class="form-spacer">
 									<label class="terms">Terms and Conditions</label>
-							</div>
+								</div>
 							<div class="submit">
 								<input type="submit" value="Submit">
-
 							</div>
-						</form>	
-					</div>
+								</form>	
+						</div>
 				</div>
 			</div>
 		</section>
@@ -156,3 +204,5 @@
 		<div id="footer">
 			www.seaturtles.ocean &nbsp; &nbsp; &copy; | 2021
 		</div>
+	</body>
+</html>
