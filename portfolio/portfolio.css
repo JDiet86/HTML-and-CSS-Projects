@@ -9,7 +9,7 @@ body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
     transition-property: opacity;
     opacity: 1;  
-    transition: opacity 5s;
+    transition: opacity 3s;
     letter-spacing: .2vw;
 }
 
@@ -29,8 +29,6 @@ h1 {
 /* Heading 1 element hover effect */
 h1:hover {
     filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
 }
 
 /* Styling for portfolio title text */
@@ -65,7 +63,7 @@ h6 {
 h4 {
     font-family:helvetica;
     text-align:center;
-    color:black;
+    color:rgba(255, 158, 74);
     font-size:2vw;
     font-style:bold;
     text-decoration: underline;
@@ -237,7 +235,7 @@ footer {
 
 /*****SLIDESHOW STYLING*****/
 #Slideshow_Background {
-    background: (255,255,255, 0.5);
+    background:rgba(255,255,255, 0.5);
 }
 
 .mySlides {
@@ -422,7 +420,6 @@ footer {
     bottom: 6px;
     right: 6px;
     font-size:1.5vw;
-    
 }
 
 /* FORM STYLING */
@@ -437,8 +434,9 @@ footer {
     width: 100%;
     padding: .93;
     margin: .6vw 0 .7vw 0;
-    border: none;
-    background: rgba(255, 158, 74,.7);
+    border:none;
+    background: #316879;
+    color:white;
     font-family: Helvetica, Avant Grde;
     font-size: 1.5vw;
 }
